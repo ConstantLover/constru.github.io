@@ -1,0 +1,19 @@
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $nombre = htmlspecialchars(trim($_POST['nombre']));
+    $email = htmlspecialchars(trim($_POST['email']));
+    $mensaje = htmlspecialchars(trim($_POST['mensaje']));
+
+    $to = "tu_email@ejemplo.com"; // Cambia esto por tu dirección de correo
+    $subject = "Nuevo mensaje de contacto";
+    $body = "Nombre: $nombre\nCorreo: $email\nMensaje:\n$mensaje";
+    $headers = "From: $email";
+
+    if (mail($to, $subject, $body, $headers)) {
+        echo "Mensaje enviado con éxito.";
+    } else {
+        echo "Error al enviar el mensaje.";
+    }
+} else {
+    echo "Método de solicitud no válido.";
+}
