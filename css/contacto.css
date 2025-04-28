@@ -1,0 +1,161 @@
+.contacto {
+    padding: 20px;
+    background-color: #e9ecef;
+    text-align: center;
+}
+
+.contacto h2 {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin: 15px 0;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    max-width: 400px; /* Ancho máximo del formulario */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn-submit {
+    background-color: #0056b3; /* Color del botón */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+    background-color: #004494; /* Color del botón al pasar el mouse */
+}
+/* construccion.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.navbar {
+    background-color: #0056b3; /* Color de fondo de la barra de navegación */
+    overflow: hidden;
+}
+
+.nav-button {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-button:hover {
+    background-color: #004494; /* Color de fondo al pasar el mouse */
+}
+
+.hero {
+    background-image: url('ima/exca.jpg'); /* Imagen de fondo para el encabezado */
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    margin: 0;
+    color: black;
+}
+
+.hero p {
+    font-size: 1.2em;
+    color: black;
+}
+
+.products-container {
+    padding: 20px;
+    text-align: center;
+}
+
+.product-card {
+    display: inline-block;
+    width: 300px; /* Ancho fijo para las tarjetas */
+    margin: 15px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.product-card:hover {
+    transform: scale(1.05); /* Efecto de aumento al pasar el mouse */
+}
+
+.product-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.product-description {
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.product-description h3 {
+    color: #0056b3; /* Color del título */
+}
+
+.vision-mision-valores {
+    padding: 20px;
+    text-align: center;
+    background-color: #e9ecef;
+}
+
+.vision-mision-valores h2 {
+    margin-bottom: 20px;
+}
+
+.vision-mision-valores div {
+    margin: 10px 0;
+}
+
+.mapa {
+    padding: 20px;
+    text-align: center;
+}
+
+footer {
+    background-color: #0056b3; /* Color de fondo del pie de página */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-content {
+    margin: 0 auto;
+}
+
+.back-to-top {
+    color: white;
+    text-decoration: none;
+}
+
+.back-to-top:hover {
+    text-decoration: underline;
+}

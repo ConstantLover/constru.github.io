@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empresa de Construcción</title>
+    <link rel="stylesheet" href="css/construccion.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+<body>
+   <nav class="navbar">
+        <a href="index.html" class="nav-button"><i class="fas fa-home"></i> Inicio</a>
+      
+        <a href="servicios.html" class="nav-button"><i class="fas fa-construction"></i> Servicios</a>
+        <a href="nosotros.html" class="nav-button"><i class="fas fa-eye"></i> Nosotros</a>
+        <a href="contacto.html" class="nav-button"><i class="fas fa-map-marker-alt"></i> Contáctanos</a>
+    </nav>
+
+    <header class="hero">
+        <h1>Bienvenido a Nuestra Empresa de Construcción</h1>
+        <p>Construimos el futuro, un proyecto a la vez.</p>
+    </header>
+
+    <main id="productos" class="products-container">
+        <h1>Productos de Construcción</h1>
+        
+        <div class="product-card fade-in" onclick="location.href='cemento.html'">
+            <div class="product-image">
+                <img src="ima/exca.jpg" alt="Cemento">
+                <div class="product-description">
+                    <h3><i class="fas fa-cement"></i> Cemento</h3>
+                    <p>Cemento de alta calidad para todas tus necesidades de construcción.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card fade-in" onclick="location.href='ladrillos.html'">
+            <div class="product-image">
+                <img src="ima/exca.jpg" alt="Ladrillos">
+                <div class="product-description">
+                    <h3><i class="fas fa-brick"></i> Ladrillos</h3>
+                    <p>Ladrillos resistentes y duraderos para edificaciones sólidas.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card fade-in" onclick="location.href='madera.html'">
+            <div class="product-image">
+                <img src="ima/exca.jpg" alt="Madera">
+                <div class="product-description">
+                    <h3><i class="fas fa-tree"></i> Madera</h3>
+                    <p>Madera de calidad para estructuras y acabados.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card fade-in" onclick="location.href='herramientas.html'">
+            <div class="product-image">
+                <img src="ima/exca.jpg" alt="Herramientas">
+                <div class="product-description">
+                    <h3><i class="fas fa-wrench"></i> Herramientas</h3>
+                    <p>Herramientas profesionales para todos los trabajos de construcción.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+   
+
+    <section class="mapa">
+        <h2>Encuéntranos Aquí</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509123!2d144.9537353153163!3d-37.81720997975157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f0f0f0f%3A0x0!2sYour+Business+Location!5e0!3m2!1sen!2sus!4v1616161616161!5m2!1sen!2sus" 
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2023 Empresa de Construcción. Todos los derechos reservados.</p>
+            <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i> Volver arriba</a>
+        </div>
+    </footer>
+    <script>
+    
+    window.addEventListener('scroll', function() {
+        const backToTop = document.querySelector('.back-to-top');
+        if (window.pageYOffset > 300) {
+            backToTop.classList.add('visible');
+        } else {
+            backToTop.classList.remove('visible');
+        }
+        
+        
+        const fadeElements = document.querySelectorAll('.product-card, .mapa h2, .mapa iframe');
+        fadeElements.forEach(element => {
+            const elementPosition = element.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+            if (elementPosition < windowHeight - 100) {
+                element.classList.add('fade-in');
+                element.classList.add('visible');
+            }
+        });
+    });
+
+   
+    document.addEventListener('DOMContentLoaded', function() {
+        const productCards = document.querySelectorAll('.product-card');
+        productCards.forEach((card, index) => {
+            card.classList.add('fade-in');
+            setTimeout(() => {
+                card.classList.add('visible');
+            }, 100 * index);
+        });
+    });
+
+ 
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
+</body>
+</html>
